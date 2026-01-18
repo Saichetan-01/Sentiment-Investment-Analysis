@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 sentiment_analyzer = SentimentIntensityAnalyzer()
 
 # News API key and URL
-NEWS_API_KEY = '07aee89ea6b741988a92fcb0ce852558'  # Replace with your actual API key
+NEWS_API_KEY = ''  # Replace with your actual API key
 NEWS_API_URL = 'https://newsapi.org/v2/everything'
 
 def fetch_stock_data(ticker, start_date, end_date):
@@ -130,3 +130,4 @@ plot_with_custom_header(merged_data)
 if not merged_data.empty:
     styled_heatmap(merged_data[['Close', 'sentiment']].corr())
     sentiment_vs_stock_price(merged_data)
+
